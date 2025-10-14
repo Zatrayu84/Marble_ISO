@@ -82,10 +82,10 @@
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.7\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.feature.development@1.0.1\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
-    <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\package.json" />
+    <None Include="Library\PackageCache\com.unity.ide.rider@3.0.38\package.json" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.2.4\Content\Shader\EdgePicker.shader" />
     <None Include="Library\PackageCache\com.unity.modules.video@1.0.0\package.json" />
-    <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\ValidationExceptions.json" />
+    <None Include="Library\PackageCache\com.unity.ide.rider@3.0.38\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.2.4\Content\Shader\VertexShader.shader" />
     <None Include="Library\PackageCache\com.unity.performance.profile-analyzer@1.2.3\package.json" />

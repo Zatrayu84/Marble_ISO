@@ -392,9 +392,6 @@
     <Reference Include="ReportGeneratorMerged">
       <HintPath>C:\Users\erikf\Documents\GitHub\Marble_ISO\Marble_ISO_2\Library\PackageCache\com.unity.testtools.codecoverage@1.2.6\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>C:\Users\erikf\Documents\GitHub\Marble_ISO\Marble_ISO_2\Library\PackageCache\com.unity.collab-proxy@2.10.0\Lib\Editor\unityplastic.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>C:\Users\erikf\Documents\GitHub\Marble_ISO\Marble_ISO_2\Library\PackageCache\com.unity.collab-proxy@2.10.0\Lib\Editor\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
@@ -406,6 +403,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
       <HintPath>C:\Users\erikf\Documents\GitHub\Marble_ISO\Marble_ISO_2\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>C:\Users\erikf\Documents\GitHub\Marble_ISO\Marble_ISO_2\Library\PackageCache\com.unity.collab-proxy@2.10.0\Lib\Editor\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>C:\Users\erikf\Documents\GitHub\Marble_ISO\Marble_ISO_2\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
