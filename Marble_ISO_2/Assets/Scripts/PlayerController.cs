@@ -1,13 +1,13 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("========/t STATS /t========")]
     [SerializeField] [Range (1, 20)] float speed;
+    [SerializeField] [Range(1, 20)] float jumpForce;
+    [SerializeField] [Range(1, 20)] float gravity;
+    
     public Rigidbody playerRb;
     public float horizontalInput;
     public float verticalInput;
@@ -37,6 +37,11 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         playerMove = new Vector3(horizontalInput,0, verticalInput).normalized;
+        
+        Jump();
+        
+        // add gravity after player is in the air
+        
     }
     void MovementPhysics()
     {
@@ -46,5 +51,15 @@ public class PlayerController : MonoBehaviour
         //This is where we are going to add the torque to make the ball roll at a later time
         /*Vector3 torque = Vector3.Cross(Vector3.up, playerMove).normalized;
         playerRb.AddTorque(torque, ForceMode.Acceleration);*/
+    }
+    
+    void Jump()
+    {
+        bool jump = Input.GetButtonDown("Jump");
+        if(jump)
+        {
+            Debug.Log("Jump key was pressed");
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 }

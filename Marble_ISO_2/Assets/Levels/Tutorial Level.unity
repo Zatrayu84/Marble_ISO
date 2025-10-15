@@ -1842,13 +1842,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 3, z: -5}
+  m_LocalRotation: {x: 0.059533715, y: -0.9080026, z: 0.13004269, w: 0.39379686}
+  m_LocalPosition: {x: 9, y: 6, z: 9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.442, y: -133.157, z: -0.34}
 --- !u!43 &988167317
 Mesh:
   m_ObjectHideFlags: 0
@@ -3775,6 +3775,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  jumpForce: 8
+  gravity: 1
   playerRb: {fileID: 1345162501}
   horizontalInput: 0
   verticalInput: 0
