@@ -3,15 +3,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("========/t STATS /t========")]
+    [Header("======== STATS ========")]
     [SerializeField] [Range (1, 20)] float speed;
     [SerializeField] [Range(1, 20)] float jumpForce;
-    [SerializeField] [Range(1, 20)] float gravity;
     
     public Rigidbody playerRb;
     public float horizontalInput;
     public float verticalInput;
-    private Vector3 playerMove;
+    private bool jumpInput;
     
     // Start is called before the first frame update
     void Start()
@@ -36,30 +35,40 @@ public class PlayerController : MonoBehaviour
         // Read the input values
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-        playerMove = new Vector3(horizontalInput,0, verticalInput).normalized;
         
-        Jump();
-        
-        // add gravity after player is in the air
-        
+        if(Input.GetButtonDown("Jump"))
+        {
+            jumpInput = true;
+        }
     }
     void MovementPhysics()
     {
-        playerRb.MovePosition(transform.position + playerMove * speed * Time.deltaTime);
+        Vector3 moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
+        playerRb.AddForce(moveDirection * speed, ForceMode.Acceleration);
         
+        //This is where i can stop my sliding
+        Vector3 flatVelocity = new Vector3(playerRb.velocity.x, 0, playerRb.velocity.z);
         
-        //This is where we are going to add the torque to make the ball roll at a later time
-        /*Vector3 torque = Vector3.Cross(Vector3.up, playerMove).normalized;
-        playerRb.AddTorque(torque, ForceMode.Acceleration);*/
+        if(flatVelocity.magnitude > speed)
+        {
+            Vector3 limitedVelocity = flatVelocity.normalized * speed;
+            playerRb.velocity = new Vector3(limitedVelocity.x, playerRb.velocity.y, limitedVelocity.z);
+        }
+        
+        Jump();
     }
     
     void Jump()
     {
-        bool jump = Input.GetButtonDown("Jump");
-        if(jump)
+        if(jumpInput && Mathf.Abs(playerRb.velocity.y) < 0.01f)
         {
             Debug.Log("Jump key was pressed");
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            jumpInput = false;
+        }
+        if (jumpInput)
+        {
+            jumpInput = false;
         }
     }
 }
