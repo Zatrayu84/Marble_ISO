@@ -129,6 +129,7 @@
     <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
+    <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />
     <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.7\PackageConversionData_Assets.json" />
     <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
