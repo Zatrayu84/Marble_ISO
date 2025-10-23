@@ -9,7 +9,7 @@ public class GoalExit : MonoBehaviour
     public GameObject playerGameObject;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             playerGameObject.SetActive(false);
             playerGameObject.transform.position = transDestination.position;

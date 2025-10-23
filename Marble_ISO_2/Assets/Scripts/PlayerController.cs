@@ -100,12 +100,15 @@ public class PlayerController : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
-        powerupIndicator.gameObject.SetActive(true);
-        Debug.Log("Powerup is now turned on");
-        hasPowerup = true;
-        jumpForce *= 2;
-        StartCoroutine(powerupTimerRoutine());
+        if (other.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
+            powerupIndicator.gameObject.SetActive(true);
+            Debug.Log("Powerup is now turned on");
+            hasPowerup = true;
+            jumpForce *= 2;
+            StartCoroutine(powerupTimerRoutine());
+        }
     }
     IEnumerator powerupTimerRoutine()
     {
@@ -113,5 +116,6 @@ public class PlayerController : MonoBehaviour
         hasPowerup = false;
         jumpForce = 10.0f;
         powerupIndicator.gameObject.SetActive(false);
+        Debug.Log("Powerup has been deactivated");
     }
 }
