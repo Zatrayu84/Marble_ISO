@@ -360,6 +360,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/CameraControl.cs"
 "Assets/Scripts/GoalExit.cs"
+"Assets/Scripts/LevelSwap.cs"
 "Assets/Scripts/PlayerController.cs"
 -langversion:9.0
 /deterministic
