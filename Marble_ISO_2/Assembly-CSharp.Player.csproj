@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GoalExit.cs" />
     <Compile Include="Assets\Scripts\CameraControl.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\LevelSwap.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Reference Include="UnityEngine">
